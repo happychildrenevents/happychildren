@@ -13,7 +13,33 @@
 	//ROUNDED TIMES COUNTDOWN
 	
 	if(isExists('#rounded-countdown')){
-		var remainingSec = $('.countdown').data('remaining-sec');
+		//var remainingSec = $('.countdown').data('remaining-sec');
+		
+		var t1 = new Date(2018, 5, 1, 0, 0, 0, 0);
+		
+		/*var today = t1;
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd = '0'+dd
+} 
+
+if(mm<10) {
+    mm = '0'+mm
+} 
+
+today = mm + '/' + dd + '/' + yyyy;
+alert(today);*/
+		var t2 = new Date();
+		var dif = t1.getTime() - t2.getTime();
+
+		var Seconds_from_T1_to_T2 = dif / 1000;
+		var remainingSec =  Math.abs(Seconds_from_T1_to_T2);		
+		
+		
+		
 		$('.countdown').ClassyCountdown({
 			theme: "flat-colors-very-wide",
 			end: $.now() + remainingSec
