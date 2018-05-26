@@ -1,5 +1,6 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+@import url('https://fonts.googleapis.com/css?family=Dosis');
 
 /*
 	Landed by HTML5 UP
@@ -1567,7 +1568,7 @@
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.75);
-		font-family: "Roboto", Helvetica, sans-serif;
+		font-family: 'Dosis',"Roboto", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
 		line-height: 1.75em;
@@ -2964,7 +2965,7 @@
 			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
 			transition: transform 1s ease, opacity 1s ease;
-			background: rgba(23, 24, 32, 0.95);
+			background: /* rgba(23, 24, 32, 0.95);*/  rgba(122, 187, 87, 0.95);
 			border-style: solid;
 			opacity: 1;
 			position: absolute;
