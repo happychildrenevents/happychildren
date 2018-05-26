@@ -1757,7 +1757,7 @@
 		}
 
 		99% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: 100001;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1766,7 +1766,7 @@
 		}
 
 		100% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: -1;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1786,7 +1786,7 @@
 		}
 
 		99% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: 100001;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1795,7 +1795,7 @@
 		}
 
 		100% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: -1;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1815,7 +1815,7 @@
 		}
 
 		99% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: 100001;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1824,7 +1824,7 @@
 		}
 
 		100% {
-			color: #1c1d26;
+			color:rgba(122, 187, 87);
 			z-index: -1;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1844,7 +1844,7 @@
 		}
 
 		99% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: 100001;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -1853,7 +1853,7 @@
 		}
 
 		100% {
-			color: #1c1d26;
+			color: rgba(122, 187, 87);
 			z-index: -1;
 			-moz-transform: scale(0.5) rotate(360deg);
 			-webkit-transform: scale(0.5) rotate(360deg);
@@ -2058,7 +2058,7 @@
 			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
 			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
 			animation: overlay-hide 1.5s ease-in forwards !important;
-			background: #1c1d26;
+			background: rgba(122, 187, 87);
 			content: '';
 			display: block;
 			height: 100%;
@@ -3562,7 +3562,7 @@
 				}
 
 				.spotlight .content {
-					background-color: #1c1d26;
+					background-color: rgba(122, 187, 87);
 					border-width: 0 !important;
 					border-top-width: 0.35em !important;
 					bottom: auto !important;
