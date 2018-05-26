@@ -1552,7 +1552,7 @@
 /* Basic */
 
 	html, body {
-		background: #1c1d26;
+		background: /*#1c1d26*/ rgb(102,190,236);
 	}
 
 	body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -3021,7 +3021,8 @@
 		}
 
 		.spotlight.style1 .content {
-			border-color: #e44c65;
+			/*border-color: #e44c65;*/
+			border-color:rgba(102, 190, 236)
 		}
 
 		.spotlight.style2 .content {
@@ -3083,7 +3084,7 @@
 	}
 
 		.wrapper.style2 {
-			background: #e44c65;
+			background: /* #e44c65*/ rgb(122,187,87);
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -3423,7 +3424,7 @@
 /* Footer */
 
 	#footer {
-		background: #272833;
+		background: /* #272833*/ rgba(245, 204, 50);
 		padding: 6em 0;
 		text-align: center;
 	}
