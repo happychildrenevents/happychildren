@@ -15,7 +15,7 @@
 	if(isExists('#rounded-countdown')){
 		//var remainingSec = $('.countdown').data('remaining-sec');
 		
-		var t1 = new Date(2018, 5, 1, 0, 0, 0, 0);
+		var t1 = new Date(2018, 5, 5, 0, 0, 0, 0);
 		
 		/*var today = t1;
 var dd = today.getDate();
