@@ -2658,7 +2658,7 @@
 
 		table th {
 			color: #ffffff;
-			font-size: 0.9em;
+			font-size:1.5em;
 			font-weight: 300;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
@@ -3358,12 +3358,12 @@
 			background-image: -moz-linear-gradient(top,rgba(245, 204, 50, 0.95) ,rgba(122, 187, 87, 0.95)), url("images/overlay.png");;
 			background-image: -webkit-linear-gradient(top,rgba(245, 204, 50, 0.95) ,rgba(122, 187, 87, 0.95)), url("images/overlay.png");;
 			background-image: -ms-linear-gradient(top, rgba(245, 204, 50, 0.95) ,rgba(122, 187, 87, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(245, 204, 50, 0.95) ,rgba(122, 187, 87, 0.95) ), url("images/overlay.png");;		
-			
+			background-image: linear-gradient(top, rgba(245, 204, 50, 0.95) ,rgba(122, 187, 87, 0.95) ), url("images/overlay.png");;
 
-			
+
+
 			/*background-color:rgb(245, 204, 50);  122 187 87
-			rgba(102, 190, 236, 0.95)  azul 
+			rgba(102, 190, 236, 0.95)  azul
 			*/
 			content: '';
 			display: block;
