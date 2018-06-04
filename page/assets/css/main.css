@@ -2640,6 +2640,7 @@
 	table {
 		margin: 0 0 2em 0;
 		width: 100%;
+		text-align: left;
 	}
 
 		table tbody tr {
@@ -3140,6 +3141,12 @@
 				.wrapper.style2 .button.special:active {
 					background-color: rgba(255, 255, 255, 0.25) !important;
 				}
+
+				.wrapper.style3 {
+					background: rgba(245, 204, 50);
+				}
+
+
 
 		.wrapper.fade-down > .container {
 			-moz-transform: translate(0,0);
