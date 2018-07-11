@@ -229,6 +229,7 @@
 					</div>
 					<section>
 						<h3>Tus Datos de Contacto</h3>
+
 						<div class="row uniform 50%">
 							<div class="6u 12u$(xsmall)">
 								<input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -249,7 +250,15 @@
 					</section>
 				</div>
 			</section>
+			<input id="honeypot" type="text" name="honeypot" value="" />
 		</form>
+
+
+		<!-- Customise the Thankyou Message People See when they submit the form: -->
+		<div style="display:none;" id="thankyou_message">
+			<h2><em>Gracias</em>Por tu pedido!
+      Te estaremos contactando proximamente!</h2>
+		</div>
 
 		<!-- Footer -->
 		<footer id="footer">
@@ -279,6 +288,7 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/shop.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>
 
 </body>
 

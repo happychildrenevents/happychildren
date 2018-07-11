@@ -3,3 +3,7 @@
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: '$';
 }
+
+#honeypot {
+  display: none; /*makes the field not visible to humans*/
+}
