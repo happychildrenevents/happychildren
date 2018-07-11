@@ -3092,6 +3092,7 @@
 			background: /* #e44c65*/ rgb(122,187,87);
 		}
 
+			.wrapper.style2 input[type="number"]:focus,
 			.wrapper.style2 input[type="text"]:focus,
 			.wrapper.style2 input[type="password"]:focus,
 			.wrapper.style2 input[type="email"]:focus,
