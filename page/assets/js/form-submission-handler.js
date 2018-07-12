@@ -5,7 +5,7 @@
   }
 
   function validateHuman(honeypot) {
-    if (honeypot) {  //if hidden form filled up
+    if (honeypot) { //if hidden form filled up
       console.log("Robot Detected!");
       return true;
     } else {
@@ -19,12 +19,12 @@
     var elements = form.elements;
 
     var fields = Object.keys(elements).filter(function(k) {
-          return (elements[k].name !== "honeypot");
+      return (elements[k].name !== "honeypot");
     }).map(function(k) {
-      if(elements[k].name !== undefined) {
+      if (elements[k].name !== undefined) {
         return elements[k].name;
-      // special case for Edge's html collection
-      }else if(elements[k].length > 0){
+        // special case for Edge's html collection
+      } else if (elements[k].length > 0) {
         return elements[k].item(0).name;
       }
     }).filter(function(item, pos, self) {
@@ -32,7 +32,7 @@
     });
 
     var formData = {};
-    fields.forEach(function(name){
+    fields.forEach(function(name) {
       var element = elements[name];
 
       // singular form elements just have one value
@@ -49,7 +49,40 @@
         }
         formData[name] = data.join(', ');
       }
+
     });
+
+
+    //Campo Pedido
+    /*
+    var pedido = "Pedido es ["
+    var total = $('#cart-total').text();
+
+    if (total != "") {
+      $('.product').each(function() {
+        if ($(this).find('input').val() > 0) {
+          pedido = pedido + " {";
+        /*  console.log("nombre:" + $(this).find('input').attr('name'));
+          console.log("precio unitario:  " + $(this).children('.product-price').text());
+          console.log("Cantidad: " + $(this).find('input').val());
+          console.log("Subtotal: " + $(this).children('.product-line-price').text());*/ /*
+          pedido = pedido + "Nombre:" + $(this).find('input').attr('name') + ";";
+          pedido = pedido + "Precio unitario:  " + $(this).children('.product-price').text() + ";";
+          pedido = pedido + "Cantidad: " + $(this).find('input').val() + ";";
+          pedido = pedido + "Subtotal: " + $(this).children('.product-line-price').text()+";";
+
+          pedido = pedido + " } *";
+        }
+      });
+     formData["pedido"] = pedido +"] Total " + total;
+
+    } else {
+      formData["pedido"] = pedido + "] Sin Datos de pedido - Contactar";
+    }
+
+
+    console.log(pedido);
+*/
 
     // add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
@@ -60,9 +93,9 @@
     return formData;
   }
 
-  function handleFormSubmit(event) {  // handles form submit without any jquery
-    event.preventDefault();           // we are submitting via xhr below
-    var data = getFormData();         // get the values submitted in the form
+  function handleFormSubmit(event) { // handles form submit without any jquery
+    event.preventDefault(); // we are submitting via xhr below
+    var data = getFormData(); // get the values submitted in the form
 
     /* OPTION: Remove this comment to enable SPAM prevention, see README.md
     if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
@@ -70,7 +103,7 @@
     }
     */
 
-    if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
+    if (data.email && !validEmail(data.email)) { // if email is not valid show error
       var invalidEmail = document.getElementById("email-invalid");
       if (invalidEmail) {
         invalidEmail.style.display = "block";
@@ -78,28 +111,29 @@
       }
     } else {
       disableAllButtons(event.target);
-      var url = event.target.action;  //
+      var url = event.target.action; //
       var xhr = new XMLHttpRequest();
       xhr.open('POST', url);
       // xhr.withCredentials = true;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
-          console.log( xhr.status, xhr.statusText )
-          console.log(xhr.responseText);
-          document.getElementById("gform").style.display = "none"; // hide form
-          var thankYouMessage = document.getElementById("thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
-          }
-          return;
+        console.log(xhr.status, xhr.statusText)
+        console.log(xhr.responseText);
+        document.getElementById("gform").style.display = "none"; // hide form
+        var thankYouMessage = document.getElementById("thankyou_message");
+        if (thankYouMessage) {
+          thankYouMessage.style.display = "block";
+        }
+        return;
       };
       // url encode form data for sending as post data
       var encoded = Object.keys(data).map(function(k) {
-          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
       }).join('&')
       xhr.send(encoded);
     }
   }
+
   function loaded() {
     console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
