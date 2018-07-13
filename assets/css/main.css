@@ -2675,6 +2675,8 @@
 
 		table tfoot {
 			border-top: solid 1px rgba(255, 255, 255, 0.3);
+			font-size:1.5em;
+			font-weight: 300;
 		}
 
 		table.alt {
