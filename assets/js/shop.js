@@ -2,6 +2,17 @@ var fadeTime = 300;
 
 var taxRate = 0.00;
 var shippingRate = 0.00;
+var cumpleReglas = false;
+
+
+var p0 = document.getElementById("p0");
+var p1 = document.getElementById("p1");
+
+p0.style.display = "none";
+p1.style.display = "block";
+
+
+
 
 
 /* Assign actions */
@@ -40,7 +51,7 @@ function recalculateCart() {
   });
 
   var pedido = "Pedido es [";
-  if (total != ""){
+  if (total != "") {
     $('.product').each(function() {
       if ($(this).find('input').val() > 0) {
         pedido = pedido + " {";
@@ -51,14 +62,24 @@ function recalculateCart() {
         pedido = pedido + " } *";
       }
     });
-  pedido = pedido + "] Total " + total;
+    pedido = pedido + "] Total " + total;
 
-} else {
-  pedido = pedido + "] Sin Datos de pedido - Contactar";
-}
+  } else {
+    pedido = pedido + "] Sin Datos de pedido - Contactar";
+  }
+  $('input[name=pedido]').val(pedido);
 
+  var p0 = document.getElementById("p0");
+  var p1 = document.getElementById("p1");
 
-$('input[name=pedido]').val(pedido);
+  if (total > 30000) {
+
+    p0.style.display = "block";
+    p1.style.display = "none";
+  } else {
+    p0.style.display = "none";
+    p1.style.display = "block";
+  }
 }
 
 
@@ -84,6 +105,7 @@ function updateQuantity(quantityInput) {
 function parseLocalNum(num) {
   return +(num.replace(".", ""));
 }
+
 
 
 Number.prototype.format = function(n, x, s, c) {
