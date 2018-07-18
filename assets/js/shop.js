@@ -28,13 +28,17 @@ function recalculateCart() {
 
   /* Sum up row totals */
   $('.product').each(function() {
-    subtotal += parseFloat(parseLocalNum($(this).children('.product-line-price').text()));
+    subtotal += parseLocalNum($(this).children('.product-line-price').text());
   });
+
+
+
 
   /* Calculate totals */
   var tax = subtotal * taxRate;
   var shipping = (subtotal > 0 ? shippingRate : 0);
   var total = subtotal + tax + shipping;
+
 
   /* Update totals display */
   $('.totals-value').fadeOut(fadeTime, function() {
@@ -103,7 +107,7 @@ function updateQuantity(quantityInput) {
 
 
 function parseLocalNum(num) {
-  return +(num.replace(".", ""));
+    return +(num.replace(".", ""));
 }
 
 
