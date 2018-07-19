@@ -107,10 +107,15 @@ function updateQuantity(quantityInput) {
 
 
 function parseLocalNum(num) {
-    return +(num.replace(".", ""));
+
+    return +(num.replaceAll("\\.", ""));
 }
 
 
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
 
 Number.prototype.format = function(n, x, s, c) {
   var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
